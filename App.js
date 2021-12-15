@@ -1,3 +1,4 @@
+//Import
 import { StatusBar } from 'expo-status-bar';
 import React, {useEffect} from 'react';
 import { StyleSheet, Text, View, DefaultTheme } from 'react-native';
@@ -17,9 +18,11 @@ import {ApplicationProvider, IconRegistry} from '@ui-kitten/components';
 import { EvaIconsPack } from '@ui-kitten/eva-icons';
 //import { Icon } from '@ui-kitten/components';
 
+//Initiate stack navigation and bottom tab
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
+//Define and initialize firebase connection
 export default function App() {
 
   const firebaseConfig = {
@@ -49,6 +52,7 @@ export default function App() {
     },
   };
 
+  //Stack screens
   const StackNavigation = () => {
     return(
       <Stack.Navigator>
@@ -60,6 +64,7 @@ export default function App() {
     )
   }
 
+//Return application container with screens for the bottom tab bar.
   return (
     <>
     <IconRegistry icons={EvaIconsPack}/>
