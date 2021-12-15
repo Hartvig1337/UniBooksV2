@@ -1,12 +1,14 @@
+//Import
 import * as React from 'react';
 import {View, FlatList, TouchableOpacity, StyleSheet, ScrollView, Alert} from 'react-native';
 import firebase from "firebase/compat/app";
 import 'firebase/compat/database';
 import {useEffect, useState} from "react";
 
+//Import UI-kitten components used
 import {Button, Text, Input, Modal, Card} from '@ui-kitten/components';
 
-
+//Define AddBook screen
 const AddBook = ({}) => {
     
     //Create reference for clearing inputs
@@ -22,7 +24,7 @@ const AddBook = ({}) => {
         return { value, onChangeText: setValue };
       };
     
-    //Success modal
+    //Success modal shown when a book is uploaded to firebase
     const [visible, setVisible] = React.useState(false);
 
     
@@ -32,6 +34,7 @@ const AddBook = ({}) => {
     const Price = useInputState();
     const Owner = useInputState();
 
+    //PushBook function that checks if all inputs are filled. Clears once Posted and reveals the success modal
     function pushBook(){
 
         //Ensures that all inputs are filled out.
@@ -56,8 +59,9 @@ const AddBook = ({}) => {
         }
     }
     
+    //Return the input form for adding a book. 
     return ( 
-        //Lets the user tab out of the numeric keyboard
+        //Lets the user tab out of the numeric keyboard more easily. 
         <ScrollView keyboardShouldPersistTaps='handled'>
 
         <Input style={style.bookForm}
