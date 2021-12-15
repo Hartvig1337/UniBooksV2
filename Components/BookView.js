@@ -1,3 +1,4 @@
+//Import
 import * as React from 'react';
 import {View, FlatList, TouchableOpacity, StyleSheet} from 'react-native';
 import firebase from "firebase/compat/app";
@@ -5,12 +6,15 @@ import 'firebase/compat/database';
 import {useEffect, useState} from "react";
 import { getDatabase, ref, child, get, database} from "firebase/database";
 
-
+//Import UI-Kitten components
 import {List, ListItem, Icon, Button, Text, Spinner, Modal, Card, typeSelected} from '@ui-kitten/components';
 
+
+//Define bookView(list of books) screen
 const BookView = ({}) => {
     
-    //Reserve handling
+    //Reserve handling 
+    //This function has not been completed yet. For the purpose of demonstrating the apps functionality, it reveals a pop-up/modal to the user.
     const [visible, setVisible] = React.useState(false); //SKIFT TIL FALSE
 
     //Reserve function
@@ -18,7 +22,7 @@ const BookView = ({}) => {
       
       //Reaveal Modal
       setVisible(true)
-      /*
+      /* Descoped for now
       let count = null;
       const dbRef = ref(getDatabase());
       function getBooks() {
@@ -37,7 +41,7 @@ const BookView = ({}) => {
       */
     }
 
-    //Icon and button for ListItems
+    //Define Icon and button for ListItems
       const BookIcon = (props) => (
         <Icon {...props} name='book-outline'/>
       );
@@ -52,9 +56,11 @@ const BookView = ({}) => {
           <Spinner size='small'/>
         </View>
       );
-
+    
+    
     const [books,setBooks] = useState()
     
+    //Use Effect hook to get books from firebase
     useEffect(() => {
         if(!books) {
             firebase
@@ -66,7 +72,7 @@ const BookView = ({}) => {
         }
     },[]);
 
-    // Show loading icon when loading books or if no books are found in the database
+    // Show loading icon when loading books or if no books are found in the database (UI Kitten used for cool loading icon).
     if (!books) {
         return ( 
         <Button style={styles.button} appearance='outline' accessoryLeft={LoadingIndicator}>
@@ -77,6 +83,7 @@ const BookView = ({}) => {
 //Initialize array from Objects collected from Firebase
 const bookArray = Object.values(books);
 
+//Defines how a book is rendered - ListItems-type is imported from ui-kitten.
 const renderBook = ( {item} ) => (
     <ListItem
       title={`${item.Title} ${item.Year}`}
@@ -85,7 +92,8 @@ const renderBook = ( {item} ) => (
       accessoryRight={ReserveButton}
     />
   );
-
+    
+  //Returns a list based on the book objects and the render method RenderBook (item).
   return (
     <>
     <List
