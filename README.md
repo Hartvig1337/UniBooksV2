@@ -13,4 +13,4 @@ Fremgangsmåden er som følger:
 6. kør 'npm start' i terminalen i mappen.
 
 OBS: Vi har launchet app'en fra 5 forskellige computere med denne fremgangsmåde.
-Vi har dog oplevet at én computer havde problemer, der dog kunne løses ved at cleare C:/Users/<user>/AppData/Local/Temp eller Metro-cache mappen. 
+Vi har dog oplevet at én computer havde problemer, der dog kunne løses ved at cleare C:/Users/(user)/AppData/Local/Temp eller Metro-cache mappen. 
