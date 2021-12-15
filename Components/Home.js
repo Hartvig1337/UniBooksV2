@@ -1,8 +1,10 @@
+//Import
 import * as React from 'react';
 import { StyleSheet, View} from 'react-native';
 import {Text} from '@ui-kitten/components';
 
-const Home = ({navigation}) => {
+//Define Home screen
+const Home = ({}) => {
     return (
         <View>
             <Text category='h3' style={style.title}>Welcome to UniBooks</Text>
