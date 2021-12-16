@@ -16,3 +16,7 @@ Fremgangsmåden er som følger:
 
 OBS: Vi har launchet app'en fra 5 forskellige computere med denne fremgangsmåde.
 Vi har dog oplevet at én computer havde problemer, der dog kunne løses ved at cleare C:/Users/(user)/AppData/Local/Temp eller Metro-cache mappen. 
+
+
+# Videodemonstration
+Uploading eksamensvideo.mp4…
