@@ -19,4 +19,5 @@ Vi har dog oplevet at én computer havde problemer, der dog kunne løses ved at 
 
 
 # Videodemonstration
-Uploading eksamensvideo.mp4…
+https://user-images.githubusercontent.com/55131892/146442628-3cd564ac-48f9-4a13-a925-ce963905f89b.mp4
+
