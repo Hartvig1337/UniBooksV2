@@ -10,7 +10,9 @@ Fremgangsmåden er som følger:
 3. 'git clone https://github.com/Hartvig1337/UniBooksV2.git' i konsollen
 4. 'code .' for at starte det (virker i Visual Studio Code). 
 5. kør 'npm install' i terminalen i mappen. 
-6. kør 'npm start' i terminalen i mappen.
+6. kør 'npm start' i terminalen i mappen. 
+6.1 Hvis den prompter om at installere "expo-cli" globalt, så accepter ved at skrive 'y'.
+
 
 OBS: Vi har launchet app'en fra 5 forskellige computere med denne fremgangsmåde.
 Vi har dog oplevet at én computer havde problemer, der dog kunne løses ved at cleare C:/Users/(user)/AppData/Local/Temp eller Metro-cache mappen. 
